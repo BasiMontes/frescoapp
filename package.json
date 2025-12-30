@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "^0.1.1",
+    "@google/genai": "*",
     "@supabase/supabase-js": "^2.39.0",
     "canvas-confetti": "^1.9.2",
     "date-fns": "^3.0.0",

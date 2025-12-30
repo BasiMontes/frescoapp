@@ -1,0 +1,1 @@
+// Archivo eliminado para producción. Los tests se ejecutan externamente mediante Playwright.

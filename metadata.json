@@ -1,0 +1,32 @@
+{
+  "name": "Fresco",
+  "short_name": "Fresco",
+  "description": "Tu asistente de cocina inteligente para planificar menús saludables, económicos y sin desperdicio.",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "categories": [
+    "food",
+    "lifestyle",
+    "productivity"
+  ],
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "icons": [
+    {
+      "src": "input_file_0.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "input_file_0.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

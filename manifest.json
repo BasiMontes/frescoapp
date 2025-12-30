@@ -1,0 +1,43 @@
+
+{
+  "name": "Fresco",
+  "short_name": "Fresco",
+  "description": "Tu asistente de cocina inteligente.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "input_file_0.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "input_file_0.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Lista de Compra",
+      "short_name": "Compra",
+      "url": "/?tab=shopping",
+      "icons": [{ "src": "input_file_0.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Mis Recetas",
+      "short_name": "Recetas",
+      "url": "/?tab=recipes",
+      "icons": [{ "src": "input_file_0.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Mi Despensa",
+      "short_name": "Stock",
+      "url": "/?tab=pantry",
+      "icons": [{ "src": "input_file_0.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from 'react';
 import { UserProfile, DietPreference, CuisineType } from '../types';
 import { Logo } from './Logo';
@@ -45,8 +44,9 @@ export const Profile: React.FC<ProfileProps> = ({ user, onUpdate, onLogout, onRe
         e.preventDefault();
         setInstallPrompt(e);
     };
-    window.addEventListener('beforeinstallprompt', handler);
-    return () => window.removeEventListener('beforeinstallprompt', handler);
+    // FIX: TypeScript no reconoce 'beforeinstallprompt' por defecto, usamos 'as any'
+    window.addEventListener('beforeinstallprompt' as any, handler);
+    return () => window.removeEventListener('beforeinstallprompt' as any, handler);
   }, []);
 
   const handleInstall = () => {

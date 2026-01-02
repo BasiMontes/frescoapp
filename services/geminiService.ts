@@ -1,4 +1,3 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 import { Recipe, UserProfile, PantryItem, MealSlot, BatchSession } from "../types";
 
@@ -129,7 +128,7 @@ export const generateWeeklyPlanAI = async (
       }
     });
 
-    const data = JSON.parse(cleanJson(response.text));
+    const data = JSON.parse(cleanJson(response.text || ''));
     const newRecipes: Recipe[] = data.recipes.map((r: any, i: number) => ({
       ...r,
       id: `ai-rec-${Date.now()}-${i}`,
@@ -189,7 +188,7 @@ export const generateBatchCookingAI = async (recipes: Recipe[]): Promise<BatchSe
       }
     });
 
-    return JSON.parse(cleanJson(response.text));
+    return JSON.parse(cleanJson(response.text || ''));
   } catch (error) {
     notifyError("La IA de cocina paralela no está disponible.");
     return { total_duration: 0, steps: [] };
@@ -211,7 +210,7 @@ export const generateRecipesAI = async (user: UserProfile, pantry: PantryItem[],
             }
         });
         
-        const data = JSON.parse(cleanJson(response.text));
+        const data = JSON.parse(cleanJson(response.text || ''));
         return data.map((r: any, i: number) => ({
             ...r,
             id: `gen-rec-${Date.now()}-${i}`,
@@ -253,7 +252,7 @@ export const extractItemsFromTicket = async (base64Image: string): Promise<any[]
         }
       }
     });
-    return JSON.parse(cleanJson(response.text));
+    return JSON.parse(cleanJson(response.text || ''));
   } catch (error) {
     notifyError("Error leyendo el ticket.");
     return [];
